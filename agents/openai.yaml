@@ -1,4 +1,4 @@
 interface:
-  display_name: "niulai动物角色与图片转换"
-  short_description: "生成动物角色或把上传图片转换为简陋3D低清贴图风格"
-  default_prompt: "使用 $niulai 生成动物角色，或将上传图片转换为统一的简陋3D建模与低清贴图效果。"
+  display_name: "NiuLai-Style"
+  short_description: "生成动物角色与人物图片转换的简陋3D建模低清贴图风格"
+  default_prompt: "使用 $niulai-style 生成动物角色，或把上传图片转换成统一的简陋3D建模与低清贴图效果。"
