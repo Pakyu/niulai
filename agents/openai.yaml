@@ -1,0 +1,4 @@
+interface:
+  display_name: "niulai动物角色生成"
+  short_description: "生成统一风格的简陋3D动物角色与低清贴图自然环境背景"
+  default_prompt: "使用 $niulai 生成一张统一风格的动物角色图，目标动物为〔填写动物〕。"
