@@ -1,13 +1,14 @@
-# niulai
+# NiuLai-Style
 
-一个用于生成统一风格动物角色图的 Codex Skill。
+一个用于生成和转换统一风格简陋 3D 角色图的 Codex Skill。
 
-`niulai` 会把用户输入的任意动物，转换成同一个低成本 3D 角色项目中的角色资产：简陋的局部建模、低清贴图、局部 UV 拉伸错误、滑稽的人类式五官，以及稀疏荒凉的旧游戏环境。
+`niulai` 既可以把任意动物生成成同一套低成本 3D 角色资产，也可以把用户上传的照片或图片转换成同一风格：简陋的局部建模、低清贴图、局部 UV 拉伸错误、滑稽的平面五官，以及廉价旧游戏环境。
 
 ## 核心特点
 
 - 严格生成 3:4 竖版、正面、全身角色图
 - 默认不需要上传参考图
+- 也支持上传任意图片，保留主体、身份、姿势和构图后做风格转换
 - 自动判断动物原生形态
 - 四足动物拟人化，前肢转换为自然下垂的人手
 - 鸟类、蛇、鱼、昆虫等保留原本身体结构
@@ -28,6 +29,12 @@ $niulai 生成一只羊
 
 ```text
 $niulai 生成一只老虎，可选特征：橙黄色身体、黑色条纹、圆耳、长尾巴
+```
+
+如果需要把已有图片转成 NiuLai-Style，直接上传原图即可：
+
+```text
+$niulai 把这张图转成 NiuLai-Style
 ```
 
 如果需要调整，直接说明修改对象即可：
@@ -53,6 +60,22 @@ $niulai 生成一只马，角色保持不变，背景减少树木，改成荒凉
 | --- | --- | --- |
 | ![马形角色](examples/horse.png) | ![羊形角色](examples/sheep.png) | ![牛形角色](examples/cow.png) |
 
+## 风格转换示例
+
+上传原图后，NiuLai-Style 会保留主体、身份、姿势和构图，再转换成统一的简陋 3D 角色风格。
+
+### 人像转换
+
+| 原图 | NiuLai-Style |
+| --- | --- |
+| <img src="examples/portrait-before.png" alt="人像原图" width="360" /> | <img src="examples/portrait-after.png" alt="人像转换" width="360" /> |
+
+### 全身转换
+
+| 原图 | NiuLai-Style |
+| --- | --- |
+| <img src="examples/fullbody-before.png" alt="全身原图" width="360" /> | <img src="examples/fullbody-after.png" alt="全身转换" width="360" /> |
+
 ## 风格说明
 
 角色的粗糙感不是全身低模，而是分层产生的：
@@ -73,7 +96,11 @@ niulai/
 ├── examples/
 │   ├── horse.png
 │   ├── sheep.png
-│   └── cow.png
+│   ├── cow.png
+│   ├── portrait-before.png
+│   ├── portrait-after.png
+│   ├── fullbody-before.png
+│   └── fullbody-after.png
 └── README.md
 ```
 
